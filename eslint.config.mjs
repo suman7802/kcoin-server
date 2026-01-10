@@ -1,0 +1,31 @@
+import pluginJs from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import eslintPluginSecurity from 'eslint-plugin-security';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+    pluginJs.configs.recommended,
+    ...tseslint.configs.recommended,
+    {
+        files: ['**/*.{js,mjs,cjs,ts}'],
+        languageOptions: { globals: globals.browser },
+        ignores: ['node_modules/**', 'dist/**', 'build/**', 'coverage/**'],
+        plugins: { security: eslintPluginSecurity, 'simple-import-sort': simpleImportSort },
+        rules: {
+            'await-in-loop': 'off',
+            'no-await-in-loop': 'off',
+            'no-console': 'error',
+            'no-duplicate-imports': 'error',
+            'require-atomic-updates': 'error',
+            'simple-import-sort/exports': 'error',
+            '@typescript-eslint/no-unused-vars': 'off',
+            '@typescript-eslint/no-empty-object-type': 'off',
+            '@typescript-eslint/no-explicit-any': 'off',
+            'simple-import-sort/imports': ['error', { groups: [['^node:'], ['^express$', '^@?\\w'], ['^@'], ['^\\.']] }],
+        },
+    },
+    eslintConfigPrettier,
+];

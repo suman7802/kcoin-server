@@ -1,0 +1,5 @@
+import crypto from 'crypto';
+
+export const sha256 = (data: string): string => crypto.createHash('sha256').update(data).digest('hex');
+
+export const getHashPassword = (password: string): string => sha256(password);
