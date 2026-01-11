@@ -73,3 +73,16 @@ export const login = asyncCatch(async (req: Request<{}, {}, authType['body'], {}
         walletAddress: user.walletAddress,
     });
 });
+
+export const logout = asyncCatch(async (req: Request, res: Response) => {
+    const t = req.t;
+
+    res.clearCookie('access_token', {
+        httpOnly: true,
+        secure: env.app.NODE_ENV === 'production',
+        sameSite: 'strict',
+        path: '/',
+    });
+
+    customSuccessResponse(res, 200, t('logout_success', { ns: 'auth' }));
+});
