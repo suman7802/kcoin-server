@@ -38,9 +38,10 @@ export const getBalance = asyncCatch(async (req: Request<{}, {}, {}, {}>, res: R
     const user = req.user;
 
     const balance = await _calculateBalance(user.walletAddress);
+    const pendingBalance = await _getPendingBalance(user.walletAddress);
 
     customSuccessResponse(res, 200, t('pending_transactions', { ns: 'translation' }), {
-        balance: balance,
+        balance: balance - pendingBalance,
         walletAddress: user.walletAddress,
     });
 });
