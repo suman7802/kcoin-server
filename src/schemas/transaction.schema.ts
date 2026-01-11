@@ -7,9 +7,10 @@ export const sendTransactionSchema = z.object({
     }),
 });
 
-export const confirmTransactionSchema = z.object({
+export const TransactionByStatusSchema = z.object({
     query: z.object({
         limit: z.coerce.number().int().positive().max(100).default(10),
+        status: z.enum(['pending', 'confirmed']).default('confirmed'),
     }),
 });
 
@@ -22,5 +23,5 @@ export const getTransactionHistorySchema = z.object({
 });
 
 export type sendTransactionType = z.infer<typeof sendTransactionSchema>;
-export type confirmTransactionType = z.infer<typeof confirmTransactionSchema>;
+export type TransactionByStatusType = z.infer<typeof TransactionByStatusSchema>;
 export type getTransactionHistoryType = z.infer<typeof getTransactionHistorySchema>;

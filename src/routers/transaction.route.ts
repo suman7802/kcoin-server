@@ -2,20 +2,18 @@ import { Router } from 'express';
 
 import {
     getBalance,
-    getConfirmedTransactionsBalance,
     getPendingBalance,
-    getPendingTransactions,
+    getTransactionsByStatus,
     getTransactionsHistory,
     getWalletSummary,
     transferFunds,
 } from '@/controllers/transaction.controller';
 import { authenticateToken } from '@/middlewares/auth.middleware';
 import validateSchema from '@/middlewares/schema-validation.middleware';
-import { confirmTransactionSchema, getTransactionHistorySchema, sendTransactionSchema } from '@/schemas/transaction.schema';
+import { getTransactionHistorySchema, sendTransactionSchema, TransactionByStatusSchema } from '@/schemas/transaction.schema';
 const transactionRouter = Router();
 
-transactionRouter.get('/pending', getPendingTransactions);
-transactionRouter.get('/confirmed', validateSchema(confirmTransactionSchema), getConfirmedTransactionsBalance);
+transactionRouter.get('/', validateSchema(TransactionByStatusSchema), getTransactionsByStatus);
 
 transactionRouter.post('/', authenticateToken, validateSchema(sendTransactionSchema), transferFunds);
 transactionRouter.get('/wallet', authenticateToken, getBalance);

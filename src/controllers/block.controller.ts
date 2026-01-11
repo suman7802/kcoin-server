@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import asyncCatch from '@/errors/asyncCatch.error';
 import { getCryptoType } from '@/schemas/crypto.schema';
 import { _getChain, _mineBlock } from '@/services/block.service';
-import { _calculateBalance, _getPendingTransactions, _transferFunds } from '@/services/transaction.service';
+import { _calculateBalance, _transferFunds } from '@/services/transaction.service';
 import { _regesterUser } from '@/services/user.service';
 import { customSuccessResponse } from '@/utils/customSuccessResponse.util';
 import { createPagination } from '@/utils/pagination.util';

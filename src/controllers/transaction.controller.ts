@@ -2,18 +2,18 @@ import { Request, Response } from 'express';
 
 import asyncCatch from '@/errors/asyncCatch.error';
 import { TransactionStatus } from '@/models/transaction.schema';
-import { confirmTransactionType, getTransactionHistoryType, sendTransactionType } from '@/schemas/transaction.schema';
+import { getTransactionHistoryType, sendTransactionType, TransactionByStatusType } from '@/schemas/transaction.schema';
 import {
     _calculateBalance,
-    _getConfirmedTransactions,
     _getPendingBalance,
-    _getPendingTransactions,
     _getTransactionHistory,
+    _getTransactionsByStatus,
     _getWalletSummary,
     _transferFunds,
 } from '@/services/transaction.service';
 import { _regesterUser } from '@/services/user.service';
 import { customSuccessResponse } from '@/utils/customSuccessResponse.util';
+import { createPagination } from '@/utils/pagination.util';
 
 export const transferFunds = asyncCatch(async (req: Request<{}, {}, sendTransactionType['body'], {}>, res: Response) => {
     const t = req.t;
@@ -25,10 +25,11 @@ export const transferFunds = asyncCatch(async (req: Request<{}, {}, sendTransact
     customSuccessResponse(res, 200, t('funds_transferred', { ns: 'translation' }));
 });
 
-export const getPendingTransactions = asyncCatch(async (req: Request<{}, {}, {}, {}>, res: Response) => {
+export const getTransactionsByStatus = asyncCatch(async (req: Request<{}, {}, {}, {}>, res: Response) => {
     const t = req.t;
+    const { limit, status } = req.query as unknown as TransactionByStatusType['query'];
 
-    const pendingTransactions = await _getPendingTransactions();
+    const pendingTransactions = await _getTransactionsByStatus(status as TransactionStatus, limit);
 
     customSuccessResponse(res, 200, t('pending_transactions', { ns: 'translation' }), pendingTransactions);
 });
@@ -46,15 +47,6 @@ export const getBalance = asyncCatch(async (req: Request<{}, {}, {}, {}>, res: R
     });
 });
 
-export const getConfirmedTransactionsBalance = asyncCatch(async (req: Request<{}, {}, {}, {}>, res: Response) => {
-    const t = req.t;
-    const query = req.params as unknown as confirmTransactionType['query'];
-
-    const transactions = await _getConfirmedTransactions(query.limit);
-
-    customSuccessResponse(res, 200, t('confirmed_transactions', { ns: 'translation' }), transactions);
-});
-
 export const getPendingBalance = asyncCatch(async (req: Request<{}, {}, {}, {}>, res: Response) => {
     const t = req.t;
     const user = req.user;
@@ -70,14 +62,17 @@ export const getPendingBalance = asyncCatch(async (req: Request<{}, {}, {}, {}>,
 export const getTransactionsHistory = asyncCatch(async (req: Request<{}, {}, {}, {}>, res: Response) => {
     const t = req.t;
     const user = req.user;
-    const query = req.params as unknown as getTransactionHistoryType['query'];
+    const query = req.query as unknown as getTransactionHistoryType['query'];
 
-    const transactions = await _getTransactionHistory(user.walletAddress, {
+    const { transactions, totalCount } = await _getTransactionHistory(user.walletAddress, {
         status: query.status as TransactionStatus,
         limit: query.limit,
         offset: query.offset,
     });
-    customSuccessResponse(res, 200, t('confirmed_transactions', { ns: 'translation' }), transactions);
+
+    const paginatedData = createPagination(transactions, query.limit, query.offset, totalCount, 'transactions');
+
+    customSuccessResponse(res, 200, t('confirmed_transactions', { ns: 'translation' }), paginatedData);
 });
 
 export const getWalletSummary = asyncCatch(async (req: Request<{}, {}, {}, {}>, res: Response) => {

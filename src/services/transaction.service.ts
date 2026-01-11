@@ -48,15 +48,6 @@ export const _transferFunds = async (senderAddress: string, recipientAddress: st
 };
 
 /**
- * Get all pending transactions (waiting to be mined)
- */
-export const _getPendingTransactions = async () => {
-    return Transaction.find({
-        status: TransactionStatus.PENDING,
-    }).sort({ timestamp: 1 });
-};
-
-/**
  * Calculate the current balance for a wallet address
  * Only counts CONFIRMED transactions (those included in blocks)
  */
@@ -83,12 +74,12 @@ export const _calculateBalance = async (walletAddress: string): Promise<number> 
 };
 
 /**
- * Get all confirmed transactions
+ * Get transactions by status
  * @param limit
  */
-export const _getConfirmedTransactions = async (limit: number) => {
+export const _getTransactionsByStatus = async (status: TransactionStatus, limit: number = 10) => {
     return Transaction.find({
-        status: TransactionStatus.CONFIRMED,
+        status: status,
     })
         .sort({ timestamp: -1 })
         .limit(limit)
@@ -121,11 +112,11 @@ export const _getTransactionHistory = async (
     walletAddress: string,
     options: {
         status?: TransactionStatus;
-        limit: number;
-        offset: number;
+        limit?: number;
+        offset?: number;
     },
 ) => {
-    const { status, limit, offset } = options;
+    const { status, limit = 10, offset = 0 } = options;
 
     const query: any = {
         $or: [{ senderAddress: walletAddress }, { recipientAddress: walletAddress }],
