@@ -1,0 +1,1888 @@
+{
+	"info": {
+		"_postman_id": "a31bbf47-26cb-49b6-9084-925661ee668f",
+		"name": "globallyHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46183183",
+		"_collection_link": "https://cloudy-sunset-501134.postman.co/workspace/Team-Workspace~74f7a82c-2fec-4a28-8ef8-407d0cab48b7/collection/46183183-a31bbf47-26cb-49b6-9084-925661ee668f?action=share&source=collection_link&creator=46183183"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"suman\",\n    \"password\": \"suman@7802\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"sanam\",\n    \"password\": \"sanam@7802\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/auth/register",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "request-id",
+									"value": "14438@sumans-MacBook-Air.local/53093c808b033a44f1c67e92-0000000000000003"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "100;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "97"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "853"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"95-aQ8MleRLEmPZHzidLAI1g2edy7A\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 12:43:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"username\": \"sanam\",\n        \"walletAddress\": \"c6c2c432-9c36-4342-9fa6-9bb04078e01b\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"suman\",\n    \"password\": \"suman@7802\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"suman\",\n    \"password\": \"suman@7802\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/auth/login",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "request-id",
+									"value": "17278@sumans-MacBook-Air.local/151b4b42b51808e7095e35f5-0000000000000005"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "100;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "95"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "822"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjI0OTJlZTdjOGM3YzlhODcyYWVhMSIsIndhbGxldEFkZHJlc3MiOiIzMWFjNGEyZi1mOGNmLTQ4YjktOTNjOS0xMTczOGNmNGQzMTkiLCJpYXQiOjE3NjgwNDkzMzgsImV4cCI6MTc2ODEzNTczOH0._gdEPeyj5m6bJFfBK-qQF_Z4V8azcAdb3fAzs57IfPI; Max-Age=3600; Path=/; Expires=Sat, 10 Jan 2026 13:48:58 GMT; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-7otgE6LsDroyjLnGYbJybHYFp5I\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 12:48:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"username\": \"suman\",\n        \"walletAddress\": \"31ac4a2f-f8cf-48b9-93c9-11738cf4d319\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "block",
+			"item": [
+				{
+					"name": "mine",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/crypto/mine",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"crypto",
+								"mine"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "mine",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/crypto/mine",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"crypto",
+										"mine"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "request-id",
+									"value": "19683@sumans-MacBook-Air.local/70dc40868fb2919109fe6f04-0000000000000002"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "100;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "865"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "572"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23c-FMiTcmFOjcbCEkFUShuWSDo0K1Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 12:52:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Block mined successfully\",\n    \"data\": {\n        \"index\": 4,\n        \"previousHash\": \"001dc8c03e31314896ab905337754f069a0a8951086b9e7b093a1945c7d04938\",\n        \"nonce\": 3235,\n        \"hash\": \"00185f45c22504399bc6ce3f74efcfb2abed1f3cb6ea689f706b8a610b56d7be\",\n        \"transactions\": [\n            {\n                \"_id\": \"69624baa09535e952eb7565e\",\n                \"senderAddress\": \"001\",\n                \"recipientAddress\": \"31ac4a2f-f8cf-48b9-93c9-11738cf4d319\",\n                \"amount\": 10,\n                \"blockIndex\": 4,\n                \"block\": \"69624baa09535e952eb75661\",\n                \"timestamp\": 1768049578192\n            }\n        ],\n        \"_id\": \"69624baa09535e952eb75661\",\n        \"timestamp\": 1768049578342,\n        \"createdAt\": \"2026-01-10T12:52:58.342Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "chain",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/crypto/chain?hash=00d0e627deee342df0828e57af43198d0f1f97319bdfc82d4980ee1151d9a330&date=2026-01-10&offset=2&limit=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"crypto",
+								"chain"
+							],
+							"query": [
+								{
+									"key": "hash",
+									"value": "00d0e627deee342df0828e57af43198d0f1f97319bdfc82d4980ee1151d9a330"
+								},
+								{
+									"key": "date",
+									"value": "2026-01-10"
+								},
+								{
+									"key": "offset",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "chain",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/crypto/chain?offset=2&limit=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"crypto",
+										"chain"
+									],
+									"query": [
+										{
+											"key": "hash",
+											"value": "00d0e627deee342df0828e57af43198d0f1f97319bdfc82d4980ee1151d9a330",
+											"disabled": true
+										},
+										{
+											"key": "date",
+											"value": "2026-01-10",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "2"
+										},
+										{
+											"key": "limit",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "request-id",
+									"value": "19683@sumans-MacBook-Air.local/70dc40868fb2919109fe6f04-0000000000000018"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "100;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "82"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "593"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "717"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2cd-EsCIL3RMGwnaZ3utgDhTmYl1r5A\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 12:57:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Block chain fetched successfully\",\n    \"data\": {\n        \"blocks\": [\n            {\n                \"_id\": \"69624b55a902629ed824d247\",\n                \"index\": 2,\n                \"previousHash\": \"0061bf8de2d5c4563fa196d68815e4d2a49849f1f61e6f16dbb4a88e62c56694\",\n                \"nonce\": 72,\n                \"hash\": \"009c9ecab677364c1566c88a035f3d9ba09f246cf9d8f7f47c3134ce574df801\",\n                \"transactions\": [\n                    {\n                        \"_id\": \"69624b55a902629ed824d244\",\n                        \"senderAddress\": \"00\",\n                        \"recipientAddress\": \"31ac4a2f-f8cf-48b9-93c9-11738cf4d319\",\n                        \"amount\": 10,\n                        \"blockIndex\": 2,\n                        \"block\": \"69624b55a902629ed824d247\",\n                        \"timestamp\": 1768049493271\n                    }\n                ],\n                \"timestamp\": 1768049493412,\n                \"createdAt\": \"2026-01-10T12:51:33.412Z\"\n            }\n        ],\n        \"pagination\": {\n            \"limit\": 1,\n            \"offset\": 2,\n            \"totalCount\": 5,\n            \"currentPage\": 3,\n            \"totalPages\": 5,\n            \"hasMore\": true,\n            \"nextOffset\": 3,\n            \"prevOffset\": 1\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "transactions",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipientAddress\": \"19f4d5b7-7c2c-4955-a6ea-8e9514c7e885\",\n    \"amount\": 15\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/transaction",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "transactions",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"recipientAddress\": \"19f4d5b7-7c2c-4955-a6ea-8e9514c7e885\",\n    \"amount\": 15\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/transaction",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "request-id",
+									"value": "15724@sumans-MacBook-Air.local/29b13fa99f50d58a8cb2185d-0000000000000015"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "100;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "85"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "467"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-64LUUmEPsz+6eo3gfdrf80CG6LM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jan 2026 07:05:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Funds transferred successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "wallet",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/transaction/wallet",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"transaction",
+								"wallet"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "wallet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/transaction/wallet",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"transaction",
+										"wallet"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "request-id",
+									"value": "21954@sumans-MacBook-Air.local/dea8318f125cd0fe9cb54fdb-0000000000000001"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "100;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "900"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8b-iQh9MSNCLfa9qnBb/e/+1O6eEEw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jan 2026 07:09:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Pending transactions\",\n    \"data\": {\n        \"balance\": 15,\n        \"walletAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "transactions by status",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/transaction?status=confirmed&limit=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"transaction"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "confirmed",
+									"description": "'pending', 'confirmed'"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "transactions by status",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/transaction?status=confirmed&limit=10",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "confirmed",
+											"description": "'pending', 'confirmed'"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "request-id",
+									"value": "34305@sumans-MacBook-Air.local/5d31232c4f1ac2582c6b052f-0000000000000003"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "100;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "97"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "886"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dd4-ZWJnNJr38URH9uM90YNl5w17TgY\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jan 2026 07:29:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Pending transactions\",\n    \"data\": [\n        {\n            \"_id\": \"69634cd26a2778ca582fd032\",\n            \"senderAddress\": \"00\",\n            \"recipientAddress\": \"19f4d5b7-7c2c-4955-a6ea-8e9514c7e885\",\n            \"amount\": 10,\n            \"status\": \"confirmed\",\n            \"blockIndex\": 5,\n            \"block\": {\n                \"_id\": \"69634cd26a2778ca582fd035\",\n                \"index\": 5,\n                \"previousHash\": \"00c4e0742a8fae2a6c4334819534f0f43fa2afc11d27219a55ed70e3af7b8eb6\",\n                \"nonce\": 397,\n                \"hash\": \"007b1b154d025e4ac0e48f951f4ec273a24d074e0fb9d1eaa1ebaf5bcb9aaf0b\",\n                \"transactions\": [\n                    \"69634cd26a2778ca582fd032\"\n                ],\n                \"timestamp\": 1768115410299,\n                \"createdAt\": \"2026-01-11T07:10:10.299Z\"\n            }\n        },\n        {\n            \"_id\": \"69634cce6a2778ca582fd02a\",\n            \"senderAddress\": \"00\",\n            \"recipientAddress\": \"19f4d5b7-7c2c-4955-a6ea-8e9514c7e885\",\n            \"amount\": 10,\n            \"status\": \"confirmed\",\n            \"blockIndex\": 4,\n            \"block\": {\n                \"_id\": \"69634ccf6a2778ca582fd02d\",\n                \"index\": 4,\n                \"previousHash\": \"002da432378a0b41145c71007cf8e2d42ac62584e70667b76ef8bbfa04262246\",\n                \"nonce\": 364,\n                \"hash\": \"00c4e0742a8fae2a6c4334819534f0f43fa2afc11d27219a55ed70e3af7b8eb6\",\n                \"transactions\": [\n                    \"69634cce6a2778ca582fd02a\"\n                ],\n                \"timestamp\": 1768115407084,\n                \"createdAt\": \"2026-01-11T07:10:07.084Z\"\n            }\n        },\n        {\n            \"_id\": \"69634cac6a2778ca582fd01d\",\n            \"senderAddress\": \"00\",\n            \"recipientAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n            \"amount\": 10,\n            \"status\": \"confirmed\",\n            \"blockIndex\": 3,\n            \"block\": {\n                \"_id\": \"69634cac6a2778ca582fd020\",\n                \"index\": 3,\n                \"previousHash\": \"00178638a85eb4544d6b19145bde2726ee9d0d503898ca8b5f86d955adf64bad\",\n                \"nonce\": 206,\n                \"hash\": \"002da432378a0b41145c71007cf8e2d42ac62584e70667b76ef8bbfa04262246\",\n                \"transactions\": [\n                    \"69634b9fda26358702e807ba\",\n                    \"69634cac6a2778ca582fd01d\"\n                ],\n                \"timestamp\": 1768115372470,\n                \"createdAt\": \"2026-01-11T07:09:32.470Z\"\n            }\n        },\n        {\n            \"_id\": \"69634b9fda26358702e807ba\",\n            \"senderAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n            \"recipientAddress\": \"19f4d5b7-7c2c-4955-a6ea-8e9514c7e885\",\n            \"amount\": 15,\n            \"status\": \"confirmed\",\n            \"blockIndex\": 3,\n            \"block\": {\n                \"_id\": \"69634cac6a2778ca582fd020\",\n                \"index\": 3,\n                \"previousHash\": \"00178638a85eb4544d6b19145bde2726ee9d0d503898ca8b5f86d955adf64bad\",\n                \"nonce\": 206,\n                \"hash\": \"002da432378a0b41145c71007cf8e2d42ac62584e70667b76ef8bbfa04262246\",\n                \"transactions\": [\n                    \"69634b9fda26358702e807ba\",\n                    \"69634cac6a2778ca582fd01d\"\n                ],\n                \"timestamp\": 1768115372470,\n                \"createdAt\": \"2026-01-11T07:09:32.470Z\"\n            }\n        },\n        {\n            \"_id\": \"69634afeda26358702e807ad\",\n            \"senderAddress\": \"00\",\n            \"recipientAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n            \"amount\": 10,\n            \"status\": \"confirmed\",\n            \"blockIndex\": 2,\n            \"block\": {\n                \"_id\": \"69634afeda26358702e807b0\",\n                \"index\": 2,\n                \"previousHash\": \"00cb67b70da53b2c29d6d4b513b814b577706f5e3a3ae9f13efb7c400fe5a7e0\",\n                \"nonce\": 304,\n                \"hash\": \"00178638a85eb4544d6b19145bde2726ee9d0d503898ca8b5f86d955adf64bad\",\n                \"transactions\": [\n                    \"69634afeda26358702e807ad\"\n                ],\n                \"timestamp\": 1768114942739,\n                \"createdAt\": \"2026-01-11T07:02:22.739Z\"\n            }\n        },\n        {\n            \"_id\": \"69634acdda26358702e807a2\",\n            \"senderAddress\": \"00\",\n            \"recipientAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n            \"amount\": 10,\n            \"status\": \"confirmed\",\n            \"blockIndex\": 1,\n            \"block\": {\n                \"_id\": \"69634acdda26358702e807a5\",\n                \"index\": 1,\n                \"previousHash\": \"0056a419701a1afff36bc01e5ab03ebcfd6f2614967a2f9c405442e176d6fcbf\",\n                \"nonce\": 318,\n                \"hash\": \"00cb67b70da53b2c29d6d4b513b814b577706f5e3a3ae9f13efb7c400fe5a7e0\",\n                \"transactions\": [\n                    \"69634acdda26358702e807a2\"\n                ],\n                \"timestamp\": 1768114893442,\n                \"createdAt\": \"2026-01-11T07:01:33.442Z\"\n            }\n        },\n        {\n            \"_id\": \"69634ac1da26358702e8079a\",\n            \"senderAddress\": \"00\",\n            \"recipientAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n            \"amount\": 10,\n            \"status\": \"confirmed\",\n            \"blockIndex\": 0,\n            \"block\": {\n                \"_id\": \"69634ac1da26358702e8079d\",\n                \"index\": 0,\n                \"previousHash\": \"0\",\n                \"nonce\": 469,\n                \"hash\": \"0056a419701a1afff36bc01e5ab03ebcfd6f2614967a2f9c405442e176d6fcbf\",\n                \"transactions\": [\n                    \"69634ac1da26358702e8079a\"\n                ],\n                \"timestamp\": 1768114881689,\n                \"createdAt\": \"2026-01-11T07:01:21.689Z\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "pending balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/transaction/pending/balance",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"transaction",
+								"pending",
+								"balance"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "pending balance",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/transaction/pending/balance",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"transaction",
+										"pending",
+										"balance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "request-id",
+									"value": "34967@sumans-MacBook-Air.local/18f2019ff819c1bee0f58f72-0000000000000003"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "100;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "97"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "850"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "134"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"86-gI184/Si0BZtjPUZseL4GV3r9dM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jan 2026 07:31:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Pending balance\",\n    \"data\": {\n        \"balance\": 15,\n        \"walletAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "transaction history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/transaction/history?status=confirmed&offset=0&limit=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"transaction",
+								"history"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "confirmed",
+									"description": "pending', 'confirmed"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "transaction history",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/transaction/history?status=confirmed&offset=0&limit=10",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"transaction",
+										"history"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "confirmed",
+											"description": "pending', 'confirmed"
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "request-id",
+									"value": "37099@sumans-MacBook-Air.local/99e503c05a7743571573cad3-0000000000000001"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "100;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "900"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aec-Y5YG5Y1w14H4jNVY9E4lvvE6xls\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jan 2026 07:33:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Confirmed transactions\",\n    \"data\": {\n        \"transactions\": [\n            {\n                \"_id\": \"69634cac6a2778ca582fd01d\",\n                \"senderAddress\": \"00\",\n                \"recipientAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n                \"amount\": 10,\n                \"status\": \"confirmed\",\n                \"blockIndex\": 3,\n                \"block\": {\n                    \"_id\": \"69634cac6a2778ca582fd020\",\n                    \"index\": 3,\n                    \"previousHash\": \"00178638a85eb4544d6b19145bde2726ee9d0d503898ca8b5f86d955adf64bad\",\n                    \"nonce\": 206,\n                    \"hash\": \"002da432378a0b41145c71007cf8e2d42ac62584e70667b76ef8bbfa04262246\",\n                    \"transactions\": [\n                        \"69634b9fda26358702e807ba\",\n                        \"69634cac6a2778ca582fd01d\"\n                    ],\n                    \"timestamp\": 1768115372470,\n                    \"createdAt\": \"2026-01-11T07:09:32.470Z\"\n                },\n                \"type\": \"received\"\n            },\n            {\n                \"_id\": \"69634b9fda26358702e807ba\",\n                \"senderAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n                \"recipientAddress\": \"19f4d5b7-7c2c-4955-a6ea-8e9514c7e885\",\n                \"amount\": 15,\n                \"status\": \"confirmed\",\n                \"blockIndex\": 3,\n                \"block\": {\n                    \"_id\": \"69634cac6a2778ca582fd020\",\n                    \"index\": 3,\n                    \"previousHash\": \"00178638a85eb4544d6b19145bde2726ee9d0d503898ca8b5f86d955adf64bad\",\n                    \"nonce\": 206,\n                    \"hash\": \"002da432378a0b41145c71007cf8e2d42ac62584e70667b76ef8bbfa04262246\",\n                    \"transactions\": [\n                        \"69634b9fda26358702e807ba\",\n                        \"69634cac6a2778ca582fd01d\"\n                    ],\n                    \"timestamp\": 1768115372470,\n                    \"createdAt\": \"2026-01-11T07:09:32.470Z\"\n                },\n                \"type\": \"sent\"\n            },\n            {\n                \"_id\": \"69634afeda26358702e807ad\",\n                \"senderAddress\": \"00\",\n                \"recipientAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n                \"amount\": 10,\n                \"status\": \"confirmed\",\n                \"blockIndex\": 2,\n                \"block\": {\n                    \"_id\": \"69634afeda26358702e807b0\",\n                    \"index\": 2,\n                    \"previousHash\": \"00cb67b70da53b2c29d6d4b513b814b577706f5e3a3ae9f13efb7c400fe5a7e0\",\n                    \"nonce\": 304,\n                    \"hash\": \"00178638a85eb4544d6b19145bde2726ee9d0d503898ca8b5f86d955adf64bad\",\n                    \"transactions\": [\n                        \"69634afeda26358702e807ad\"\n                    ],\n                    \"timestamp\": 1768114942739,\n                    \"createdAt\": \"2026-01-11T07:02:22.739Z\"\n                },\n                \"type\": \"received\"\n            },\n            {\n                \"_id\": \"69634acdda26358702e807a2\",\n                \"senderAddress\": \"00\",\n                \"recipientAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n                \"amount\": 10,\n                \"status\": \"confirmed\",\n                \"blockIndex\": 1,\n                \"block\": {\n                    \"_id\": \"69634acdda26358702e807a5\",\n                    \"index\": 1,\n                    \"previousHash\": \"0056a419701a1afff36bc01e5ab03ebcfd6f2614967a2f9c405442e176d6fcbf\",\n                    \"nonce\": 318,\n                    \"hash\": \"00cb67b70da53b2c29d6d4b513b814b577706f5e3a3ae9f13efb7c400fe5a7e0\",\n                    \"transactions\": [\n                        \"69634acdda26358702e807a2\"\n                    ],\n                    \"timestamp\": 1768114893442,\n                    \"createdAt\": \"2026-01-11T07:01:33.442Z\"\n                },\n                \"type\": \"received\"\n            },\n            {\n                \"_id\": \"69634ac1da26358702e8079a\",\n                \"senderAddress\": \"00\",\n                \"recipientAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n                \"amount\": 10,\n                \"status\": \"confirmed\",\n                \"blockIndex\": 0,\n                \"block\": {\n                    \"_id\": \"69634ac1da26358702e8079d\",\n                    \"index\": 0,\n                    \"previousHash\": \"0\",\n                    \"nonce\": 469,\n                    \"hash\": \"0056a419701a1afff36bc01e5ab03ebcfd6f2614967a2f9c405442e176d6fcbf\",\n                    \"transactions\": [\n                        \"69634ac1da26358702e8079a\"\n                    ],\n                    \"timestamp\": 1768114881689,\n                    \"createdAt\": \"2026-01-11T07:01:21.689Z\"\n                },\n                \"type\": \"received\"\n            }\n        ],\n        \"pagination\": {\n            \"limit\": 10,\n            \"offset\": 0,\n            \"totalCount\": 5,\n            \"currentPage\": 1,\n            \"totalPages\": 1,\n            \"hasMore\": false,\n            \"nextOffset\": null,\n            \"prevOffset\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "transaction summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/transaction/summary",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"transaction",
+								"summary"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "transaction summary",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/transaction/summary",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"transaction",
+										"summary"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "request-id",
+									"value": "37321@sumans-MacBook-Air.local/f8395e0b237f44729dfd2e55-0000000000000001"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3000"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "100;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "900"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-vQs25ni1hl4B/6uiXOqIQfjuKxo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 11 Jan 2026 07:34:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Wallet summary\",\n    \"data\": {\n        \"walletAddress\": \"a0ea2991-d6d3-414a-a59e-49a3ef032c77\",\n        \"availableBalance\": 25,\n        \"pendingBalance\": 15,\n        \"pendingTransactionCount\": 1,\n        \"totalTransactionCount\": 6\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "root",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": [
+				{
+					"name": "root",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "request-id",
+							"value": "15724@sumans-MacBook-Air.local/29b13fa99f50d58a8cb2185d-0000000000000012"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "RateLimit-Policy",
+							"value": "100;w=900"
+						},
+						{
+							"key": "RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "RateLimit-Remaining",
+							"value": "88"
+						},
+						{
+							"key": "RateLimit-Reset",
+							"value": "516"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "139"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8b-MrLtLnS4Hv+gne9M/rMX4HCpJoE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Jan 2026 07:04:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Welcome to the API\",\n    \"data\": {\n        \"appName\": \"kcoin\",\n        \"appVersion\": \"1.5.0\",\n        \"appEnveronment\": \"development\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
