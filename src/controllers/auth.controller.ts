@@ -8,7 +8,7 @@ import asyncCatch from '@/errors/asyncCatch.error';
 import { authType } from '@/schemas/auth.schema';
 import { _getUser, _regesterUser } from '@/services/user.service';
 import { getHashPassword } from '@/utils/crypto.util';
-import { customSuccessResponse } from '@/utils/custom-success-response.util';
+import { customSuccessResponse } from '@/utils/customSuccessResponse.util';
 import { signJwt } from '@/utils/jwt.util';
 
 export const regester = asyncCatch(async (req: Request<{}, {}, authType['body'], {}>, res: Response) => {

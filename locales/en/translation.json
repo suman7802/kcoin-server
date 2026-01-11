@@ -19,5 +19,8 @@
     "funds_transferred": "Funds transferred successfully",
     "pending_transactions": "Pending transactions",
     "block_mined": "Block mined successfully",
-    "block_chain": "Block chain fetched successfully"
+    "block_chain": "Block chain fetched successfully",
+    "confirmed_transactions": "Confirmed transactions",
+    "pending_balance": "Pending balance",
+    "wallet_summary": "Wallet summary"
 }

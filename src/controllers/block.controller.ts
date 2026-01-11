@@ -2,10 +2,10 @@ import { Request, Response } from 'express';
 
 import asyncCatch from '@/errors/asyncCatch.error';
 import { getCryptoType } from '@/schemas/crypto.schema';
-import { _getChain, _mineBlock } from '@/services/crypto.service';
+import { _getChain, _mineBlock } from '@/services/block.service';
 import { _calculateBalance, _getPendingTransactions, _transferFunds } from '@/services/transaction.service';
 import { _regesterUser } from '@/services/user.service';
-import { customSuccessResponse } from '@/utils/custom-success-response.util';
+import { customSuccessResponse } from '@/utils/customSuccessResponse.util';
 import { createPagination } from '@/utils/pagination.util';
 
 export const getChain = asyncCatch(async (req: Request<{}, {}, {}, {}>, res: Response) => {

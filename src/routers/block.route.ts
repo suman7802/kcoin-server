@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { getChain, mineBlock } from '@/controllers/crypto.controller';
+import { getChain, mineBlock } from '@/controllers/block.controller';
 import { authenticateToken } from '@/middlewares/auth.middleware';
 import validateSchema from '@/middlewares/schema-validation.middleware';
 import { getCryptoSchema } from '@/schemas/crypto.schema';

@@ -5,7 +5,7 @@ import { ERROR_CODES } from '@/constants/error-codes.constant';
 import { STATUS_CODES } from '@/constants/statuscodes.constant';
 import { ApiError } from '@/errors/ApiError.error';
 import asyncCatch from '@/errors/asyncCatch.error';
-import { customSuccessResponse } from '@/utils/custom-success-response.util';
+import { customSuccessResponse } from '@/utils/customSuccessResponse.util';
 
 import packageJson from '../../package.json';
 
