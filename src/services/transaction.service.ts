@@ -146,7 +146,7 @@ export const _getTransactionHistory = async (
  * This provides a complete overview of the wallet's financial state
  */
 export const _getWalletSummary = async (walletAddress: string) => {
-    const [availableBalance, pendingBalance, pendingTxCount, totalTransactionCount] = await Promise.all([
+    const [totalBalance, pendingBalance, pendingTxCount, totalTransactionCount] = await Promise.all([
         _calculateBalance(walletAddress),
         _getPendingBalance(walletAddress),
         Transaction.countDocuments({
@@ -157,6 +157,8 @@ export const _getWalletSummary = async (walletAddress: string) => {
             $or: [{ senderAddress: walletAddress }, { recipientAddress: walletAddress }],
         }),
     ]);
+
+    const availableBalance = totalBalance - pendingBalance;
 
     return {
         walletAddress,
