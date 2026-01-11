@@ -1,9 +1,9 @@
 import app from '@/app';
 import { env } from '@/configs/env.config';
 import logger from '@/loggers/winston.logger';
-import { getLocalIp } from '@/utils/get-localIp.util';
 
 import { connectDB } from './lib/mongo.lib';
+import { getLocalIp } from './utils/getLocalIp.util';
 
 const startServer = async () => {
     try {
